@@ -17,32 +17,32 @@ import gui.TerraFrame;
  * 	Terra
  * 		main
  * 			Create a new TerraFrame.
- * 
+ *
  * 	TerraFrame
  * 		Initialize variables to hold the application title, width, and height.
  * 		Create an ArrayList to keep track of all active windows.
- * 
+ *
  * 		Create a default constructor.
  * 			Set the various settings for the JFrame (Title, Icon, Visibility, Resizeability, Location, and Close Operation)
  * 			Add a TerraPanel.
- * 
+ *
  * 		saveImages
  * 			Try to export each image on the frames in the ArrayList.
  * 			Catch any IOExceptions and display a JOptionPane to inform the user of the error.
- * 
+ *
  * 		generateTerrain
  * 			Initialize a BufferedImage for each possible map.
  * 			If useFallOffMap is true than create new images with a FallOffMap.
  * 			Or, create the images without a FallOffMap
  * 			If showRawNoise is true than create a new MapFrame with the noise image
  * 			Create a new MapFrame with the height map image.
- * 
+ *
  * 		getTerrains
  * 			Return the ArrayList of active MapFrames.
- * 
+ *
  * 		$TerraPanel
  * 			Initialize variables to hold the JLabels and JTextFields for each variable along with enable JCheckBoxes for raw noise, fall off map, and randomized seeds.
- * 			
+ *
  * 			Create a default constructor.
  * 				Set up a new GridLayout and CompoundBorder.
  * 				Create the JLabels and JTextFields for each variable along with enable JCheckBoxes for raw noise, fall off map, and randomized seeds.
@@ -50,20 +50,20 @@ import gui.TerraFrame;
  * 				Add an actionListener to the Generate button to call the generateTerrain method.
  * 				Add an actionListener to the Export button to call the saveImages method.
  * 				Add the various components to the MapPanel.
- * 
+ *
  * 	MapFrame
  * 		Initialize variables to hold the application title, width, height and panel.
- * 		
+ *
  * 		Create a default constructor.
  * 			Set the various settings for the JFrame (Title, Icon, Visibility, Resizeability, Location, and Close Operation)
  * 			Add a MapPanel.
- * 
+ *
  * 		getPanel
  * 			Return the MapPanel.
- * 
+ *
  * 		windowOpened
  * 			Add this MapFrame to the ArrayList of MapFrames in TerraFrame.
- * 
+ *
  * 		windowClosing
  * 			Remove this MapFrame from the ArrayList of MapFrames in TerraFrame.
  *
@@ -81,7 +81,7 @@ import gui.TerraFrame;
  *
  *	HeightMapGenerator
  *		Initialize variables to hold the width, height, noise, and colors of the new terrain.
- *		
+ *
  *		Create a default constructor.
  *			Set the values of the passed width, height, and noise to 0.
  *
@@ -221,7 +221,7 @@ import gui.TerraFrame;
  *
  *		Create the main argument constructors.
  *			Set the variables to the passed in values.
- *		
+ *
  *		getNoiseValue
  *			Return a generated noise value.
  *
@@ -275,12 +275,10 @@ import gui.TerraFrame;
  * -------------------------------------------------------------------------------------------------------------------------------------
 */
 
-public class Terra 
-{
-	private static final String APPLICATION_TITLE = "Terra";
-	
-	public static void main(String[] args) 
-	{
-		new TerraFrame(APPLICATION_TITLE, 200, 450);
-	}
+public class Terra {
+    private static final String APPLICATION_TITLE = "Terra";
+
+    public static void main(String[] args) {
+        new TerraFrame(APPLICATION_TITLE, 200, 450);
+    }
 }
